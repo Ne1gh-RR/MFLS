@@ -13,15 +13,13 @@ namespace MFLS
      {
           public Camera2D Camera = new Camera2D(800, 600);
 
-          public static string Language = "EN";
+          public static string Language = "EN"; //Так похуй.
 
-          Layer _guiLayer;
+          public static Layer GUILayer; //Так похуй.
 
           public GameController() : base(SceneMgr.GetScene("default")["default"])
           {
-
-
-               GameMgr.MaxGameSpeed = 60;
+               GameMgr.MaxGameSpeed = 144;
                GameMgr.MinGameSpeed = 60; // Fixing framerate on 60.
 
                Camera.BackgroundColor = Color.White;
@@ -34,12 +32,12 @@ namespace MFLS
 
                GraphicsMgr.VertexBatch.SamplerState = SamplerState.PointClamp;
 
-               _guiLayer = Scene.CreateLayer("gui");
-               _guiLayer.IsGUI = true;
+               GUILayer = Scene.CreateLayer("gui");
+               GUILayer.IsGUI = true;
 
-               var cameraController = new CameraController(_guiLayer, Camera);
+               var cameraController = new CameraController(GUILayer, Camera);
 
-               var switcher = new SceneSwitcher(_guiLayer, cameraController);
+               var switcher = new SceneSwitcher(GUILayer, cameraController);
                switcher.CurrentFactory.CreateScene();
 
                Text.CurrentFont = ResourceHub.GetResource<IFont>("Arial");

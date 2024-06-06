@@ -20,7 +20,7 @@ namespace MFLS
 				Scale = Vector2.One * 5
 			};
 
-			localeTextMgr = new LocaleTextMgr(layer, container, textDrawerSettings);
+			localeTextMgr = new LocaleTextMgr(GameController.GUILayer, container, textDrawerSettings);
 		}
 
 		public override void Update()
