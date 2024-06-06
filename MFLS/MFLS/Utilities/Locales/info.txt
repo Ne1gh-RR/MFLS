@@ -1,0 +1,73 @@
+﻿-----------------------------------------
+
+                  info
+
+-----------------------------------------
+
+Locales System (LS) -- is a system that allow you to manage various texts in your game easily. With this system you can add
+multiple languages to your game and load texts on these languages dynamically. 
+
+Native LS is divided in two parts:
+1) In-Game Text (IGT);
+2) Dialogue System (DS);
+
+Each part consists of units.
+
+IGT consists of one type of unit -- IGT unit, and DS consists of three types of units -- Replicas, Commantaries and Choices.
+
+Locales system has its own drawing class, that allows you to use some advanced techniques such as:
+* Coloring text in parts
+* Setting up sounds for each symbol, that can be useful when drawing character's replica
+* Shaking text in parts (whole fragment or each character)
+* Make letters wave~
+* Setting up text speed for each fragment of text
+* Waiting after drawing certain symbol
+* Setting text boundaries, which automatic wrapping system uses
+
+There are formatting codes such as:
+
+Coloring:
+<&Red>Hello!</&>. Note: you can use monogame colors
+<&New(255, 255, 255, 1)>Hello!</&>. RGBA color format
+
+Shaking:
+<*30, false>Hello!</&>. First value - float, that represents intensity. Second value - bool, that will tell parser, if drawer have to compute shaking offset with Vector2.Lerp(). Note: if you use lerp-ed shaking, intensity should be larger than usual in 10 times.
+
+Sinusoidal moving:
+<~false, 2, 1, 1>Who-o-o-o-o!</> First - will symbol move only on Y axis.
+
+
+-------------Unit containers-------------
+
+# (your container name) (bool: is it controllable by pressing interaction button) (bool: if units will be taken from container randomly)
+any-type unit
+any-type unit
+any-type unit
+
+-------------Characters' Replcias-------------
+
+! Meltstone Normal Default -- set up character for replica
+      ^      ^        ^
+    char   emot*  text speed*
+
+Replica1
+Replica2
+Replica2
+
+
+-------------Commentaries-------------
+
+* Commentary
+* Commentary
+* Commentary
+
+-------------Choices (with consequences)-------------
+
+> (choices text) -- set up choices with text above it (native choices container is able to contain up to 4 choices) 
+^ Choice1
+^ Choice2
+^ Choice3
+^ Choice4
+
+
+* Characters' emotions include: Normal, Serious, Sarcasm, Happy, BroadSmile, Laugh, Sad, Cry, Evil, Mad, Thinking, Side.

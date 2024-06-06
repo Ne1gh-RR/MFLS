@@ -1,0 +1,80 @@
+{
+	"root": "../../MFLS.Content/Content/",
+	"references":
+	[
+		"../../MFLS.Content/bin/*.dll"
+	],
+	"content": {
+		"contentList": {
+			"path": "$Content.npl",
+			"recursive": "False",
+			"action": "build",
+			"importer": "ResourceInfoImporter",
+			"processor": "PassThroughProcessor",
+			"watch": [
+				"../../MFLS.Content/Content/*"
+			]
+		},
+		"Music": {
+			"path": "Sounds/Music/*.mp3",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"SoundEffects": {
+			"path": "Sounds/Effects/*.wav",
+			"recursive": "True",
+			"action": "copy"
+		},
+		"SpriteGroups": {
+			"path": "Graphics/*.spritegroup",
+			"recursive": "True",
+			"action": "build",
+			"importer": "SpriteGroupImporter",
+			"processor": "SpriteGroupProcessor",
+			"watch": [
+				"Default/*.png",
+				"Default/*.json"
+			]
+		},
+		"Effects": {
+			"path": "Effects/*.fx",
+			"recursive": "True",
+			"action": "build",
+			"importer": "EffectImporter",
+			"processor": "EffectProcessor"
+		},
+		"TiledMaps": {
+			"path": "Maps/*.tmx",
+			"recursive": "True",
+			"action": "build",
+			"importer": "TiledMapImporter",
+			"processor": "PassThroughProcessor",
+			"watch": [
+				"Tilesets/*.tsx",
+				"Tilesets/*.png",
+				"Templates/*.tsx",
+				"Templates/*.tx",
+				"Templates/*.png"
+			]
+		},
+		"TiledMapTextures": {
+			"path": "Maps/*.png",
+			"recursive": "True",
+			"action": "build",
+			"importer": "TextureImporter",
+			"processor": "TextureProcessor"
+		},
+		"Fonts": {
+			"path": "Fonts/*.spritefont",
+			"recursive": "True",
+			"action": "build",
+			"importer": "FontDescriptionImporter",
+			"processor": "FontDescriptionProcessor"
+		},
+		"Locales": {
+			"path": "Locales/*.loc",
+			"recursive": "True",
+			"action": "copy"
+		}
+	}
+}

@@ -1,0 +1,47 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+/reference:../../MFLS.Content/bin/AssimpNet.dll
+/reference:../../MFLS.Content/bin/ATI.TextureConverter.dll
+/reference:../../MFLS.Content/bin/CppNet.dll
+/reference:../../MFLS.Content/bin/MFLS.Content.dll
+/reference:../../MFLS.Content/bin/Monofoxe.Pipeline.dll
+/reference:../../MFLS.Content/bin/MonoGame.Framework.Content.Pipeline.dll
+/reference:../../MFLS.Content/bin/MonoGame.Framework.dll
+/reference:../../MFLS.Content/bin/Nvidia.TextureTools.dll
+/reference:../../MFLS.Content/bin/PVRTexLibNET.dll
+/reference:../../MFLS.Content/bin/SharpDX.D3DCompiler.dll
+/reference:../../MFLS.Content/bin/SharpDX.dll
+/reference:../../MFLS.Content/bin/SharpFont.dll
+/reference:../../MFLS.Content/bin/StbImageSharp.dll
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Content.npl
+/importer:ResourceInfoImporter
+/processor:PassThroughProcessor
+/build:Content.npl
+
+#begin ../../MFLS.Content/Content/Graphics/Default.spritegroup
+/importer:SpriteGroupImporter
+/processor:SpriteGroupProcessor
+/build:../../MFLS.Content/Content/Graphics/Default.spritegroup;Graphics/Default.spritegroup
+
+#begin ../../MFLS.Content/Content/Fonts/Arial.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/build:../../MFLS.Content/Content/Fonts/Arial.spritefont;Fonts/Arial.spritefont
+
+#begin ../../MFLS.Content/Content/Locales/EN/Test.loc
+/copy:../../MFLS.Content/Content/Locales/EN/Test.loc;Locales/EN/Test.loc
+
+#begin ../../MFLS.Content/Content/Locales/RU/Test.loc
+/copy:../../MFLS.Content/Content/Locales/RU/Test.loc;Locales/RU/Test.loc

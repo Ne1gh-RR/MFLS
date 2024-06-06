@@ -1,0 +1,28 @@
+
+#----------------------------- Global Properties ----------------------------#
+
+/outputDir:bin/$(Platform)
+/intermediateDir:obj/$(Platform)
+/config:
+/profile:Reach
+/compress:False
+
+#-------------------------------- References --------------------------------#
+
+
+#---------------------------------- Content ---------------------------------#
+
+#begin Content.npl
+/importer:ResourceInfoImporter
+/processor:PassThroughProcessor
+/build:Content.npl
+
+#begin ../../MFLS.Content/Content/Graphics/Default.spritegroup
+/importer:SpriteGroupImporter
+/processor:SpriteGroupProcessor
+/build:../../MFLS.Content/Content/Graphics/Default.spritegroup;Graphics/Default.spritegroup
+
+#begin ../../MFLS.Content/Content/Fonts/Arial.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/build:../../MFLS.Content/Content/Fonts/Arial.spritefont;Fonts/Arial.spritefont

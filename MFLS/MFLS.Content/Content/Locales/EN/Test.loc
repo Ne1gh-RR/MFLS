@@ -1,0 +1,16 @@
+﻿# TestContainer true
+Hey.
+
+//color changing
+<&Red>He</>yo
+<&New(255, 50, 200, 1)>somthing
+
+//sinusoidal moving
+<~true, 20, 2>Heyo
+<~false, 50, 2>Hello
+<~true, 40, 2, true, 0.05>Hello
+<~true, 40, 2, true, 0.05>Hello
+
+//shaking
+<*@2, false>Hello
+<*2, false>Hello
